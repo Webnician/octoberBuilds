@@ -1,6 +1,7 @@
 # octoberBuilds
 <p align="center">
     <img src="https://github.com/octobercms/october/blob/master/themes/demo/assets/images/october.png?raw=true" alt="October" width="25%" height="25%" />
+    <span style='font-size: 30px;'> + </span>
     <img src="http://webnician.net/webnicianHub/themes/webnician/assets/images/NewWeb26.png" alt="Webnician Hub" width="25%" height="25%" />
 </p>
 
