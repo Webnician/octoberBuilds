@@ -1,0 +1,51 @@
+description = "Main layout"
+==
+
+<!DOCTYPE html>
+<!--<html>-->
+<head>
+    <meta charset="utf-8">
+    <title>Welcome Webnician</title>
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+    <meta name="author" content="OctoberCMS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="OctoberCMS">
+    <link rel="icon" type="image/png" href="{{ 'assets/images/BlankCircleFavicon2.png'|theme }}">
+    <link href="{{ ['assets/styles/css/styles.css']|theme }}" rel="stylesheet">
+    <link href="{{ ['assets/styles/css/foundation.css']|theme }}" rel="stylesheet">
+    <link href="{{ ['assets/styles/css/foundation.min.css']|theme }}" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="{{ ['assets/js/vue.js']|theme }}"></script>
+
+
+
+    {% styles %}
+    {% framework %}
+    {% framework extras %}
+    <meta name="theme-color" content="#2a88bd" />
+</head>
+<body>
+
+<!-- Header -->
+<header id="layout-header">
+
+</header>
+
+<!-- Content -->
+<section id="layout-content" >
+    {% page %}
+</section>
+
+<!-- Footer -->
+<footer id="layout-footer">
+{% partial "footer" %}
+    <script src="{{ ['assets/js/prodjs/functions.min.js']|theme }}"></script>
+</footer>
+
+<!-- Scripts -->
+
+
+</body>
+</html>
