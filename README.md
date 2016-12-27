@@ -20,21 +20,31 @@ This package includes October CMS with a bare bones, Webnician theme and build t
 1.  For local development, this package requires a local web server running a minimum of php 5.6
 2.  <a href='https://nodejs.org/en/'>Node.js</a>.  This will be used for the npm package manager
 3.  <a href='https://getcomposer.org/'>Composer</a> dependency manager.  This will be used for the October commands
+4. <a href='https://git-scm.com/'> git cli</a> are the GIT command line tools.  These will be used for cloning the project.  Also this project can be downloaded from the GitHub page
 
 ###Getting started
 1. Install the previously mentioned requirements
 2.  <a href='https://github.com/Webnician/octoberBuilds.git'>Clone</a> the package here : https://github.com/Webnician/octoberBuilds
-3.  Create a local database
-4.  Navigate to the project directory created in step 2.  Run 'composer install' to install the needed dependencies
-5.  Navigate to config/database and configure the database connection.  Normally this will be MySql.  Point this to the database created in step 3
-6. Run 'php artisan october:up' in the main project directory. This will create the needed database files 
-7. navigate to the themes/webnician directory and run npm install.  This will install the node dependencies needed to run the build tools
-8.  The build tools use gulp to run a webserver, browsersync, transpile scss into css, minify javascript, and backup your project
-9.  To use these tools, run the command 'gulp' which will start a local webserver, and the browser will refresh when making code changes.
+3.  Create a local database. Navigate to config/database and configure the database connection.  Normally this will be MySql.  Enter local DB name and Password
+4.  Navigate to the project directory created in step 2.  Run 'composer install' to install the needed dependencies  
+5. Run 'php artisan october:up' in the main project directory. This will create the needed database files 
+6. navigate to the themes/webnician directory and run npm install.  This will install the node dependencies needed to run the build tools
+7. Naviagte to the gulpfile.js in the theme dirctory.  Here, browsersync will have to be configured to work with your local webserver.  
+there will entries for host and proxy, set these to match the localhost configured in step 1
+
+###Using the build tools
+-    The build tools use gulp to run browsersync, transpile scss into css, minify javascript, and backup your project.
+ 
+- To use these tools, run the command 'gulp' which will start a local webserver, and the browser will refresh when making code changes.
 This will also watch the javascript and scss files, compile/transpile them and make them available for use in the project.
-10. Any additionally needed javascript files needed can be placed in the assets/js folder and they will be concatented and minified and added
+ 
+- Any additionally needed javascript files needed can be placed in the assets/js folder and they will be concatented and minified and added
 to functions.min.js.  Scss files in the styles folder will be transpiled and added as css files in the styles/css directory.
-11. the 'gulp gzip-tar' command will back up the entire project
+
+- The 'gulp gzip-tar' command will back up the entire project.
+
+- The included theme uses Foundation 6 for UI elements and the layout
+
 
 ```shell
 php -r "eval('?>'.file_get_contents('https://octobercms.com/api/installer'));"
